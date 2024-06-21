@@ -1,0 +1,374 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- remix icon -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/> 
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <style>
+        li:hover .group{
+           display: block;
+         
+       }
+       .group ul li a:hover{
+           color: #6B1019;
+           transition: ease-in 0.4s;
+       }
+    </style>
+     <nav class="bg-primary  text-white border-gray-200  font-Roboto fixed w-[100%] z-50 top-0">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="img/car-repair.svg" class="h-8" alt="Jude auto hub logo">
+            <span class="self-center text-[1.2rem] font-semibold whitespace-nowrap dark:text-white">Jude Auto Hub</span>
+        </a>
+        <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse  ">
+            <button type="button" class="text-white  border ease-in duration-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-3 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 xm:hidden"><a href="appointment.html">Appointment</a></button>
+            <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <div>
+                <div id="menu-icon"><i class="ri-menu-3-line text-2xl"></i></div>
+              </div>
+          </button>
+        </div>
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="menu">
+          <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
+            <li>
+              <a href="index.html" class="block py-2 px-3   rounded md:bg-transparent md:p-0" aria-current="page">Home</a>
+            </li>
+            <li>
+              <a href="about.html" class="block py-2 px-3 rounded md:hover:bg-transparent  md:p-0   ">About</a>
+            </li>
+            <li class="relative ease-in duration-500">
+              <a href="service.html" class="block py-2 px-3 rounded  md:hover:bg-transparentt md:p-0">Services</a>
+              <div class="bg-black absolute rounded-sm hidden group ease-in duration-300">
+                <ul class="px-6 py-3 flex flex-col text-sm gap-2 ">
+                    <li class="p-2 rounded-md hover:bg-gray-800 ease-in duration-300 border-b border-white"><a href="ac.html">A/C service</a></li>
+                    <li class="p-2 rounded-md hover:bg-gray-800 ease-in duration-300 border-b border-white"><a href="brake.html">Brake Repair</a></li>
+                    <li class="p-2 rounded-md hover:bg-gray-800 ease-in duration-300 border-b border-white"><a href="engine.html">Engine Repair</a></li>
+                    <li class="p-2 rounded-md hover:bg-gray-800 ease-in duration-300 border-b border-white"><a href="oil.html">Oil Change</a></li>
+                    <li class="p-2 rounded-md hover:bg-gray-800 ease-in duration-300 border-b border-white"><a href="tire.html">Tire Change</a></li>
+                    <li class="p-2 rounded-md hover:bg-gray-800 ease-in duration-300 border-b border-white"><a href="performance.html">Performance</a></li>
+                </ul>
+     
+              </div>
+            </li>
+            <li>
+              <a href="blog.html" class="block py-2 px-3 rounded   md:p-0 ">Blog</a>
+            </li>
+            <li>
+              <a href="shop.html" class="block py-2 px-3 rounded   md:p-0 text-red-600">Shop</a>
+            </li>
+            <li>
+              <a href="contact.html" class="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent  md:p-0   ">Contact</a>
+            </li>
+          </ul>
+        </div>
+        </div>
+          </nav>
+     <!-- ====================nav bar side========================== -->
+
+       <!-- ==============================landing-page============== -->
+       <div style="background-image: url(img/shop1.webp);background-position: center;background-size: cover;background-repeat: no-repeat; object-fit: cover;white-space: wrap;width: 100%;" class="bg-center bg-cover">
+        <div class="p-4 flex flex-col justify-center items-center">
+            <div class=" mt-40 font-Roboto">
+                <p class="text-white text-4xl font-semibold text-center">Get Amazing Products at Jude Auto Shop</p>
+            </div>
+            <div class="mt-4 font-light text-center">
+                <p class="text-[1.1rem] text-white">Explore our extensive range of high-quality automotive products designed to keep your vehicle <br> in top condition. From essential maintenance items to performance-enhancing upgrades, <br> our shop has everything you need to ensure your car runs smoothly and efficiently.
+
+                </p>
+            </div>
+            <div class="mt-4 p-6">
+              <button class="text-black py-3 px-8 rounded-md bg-blue-100 "><a href="#serve">Our Services</a></button>
+            </div> 
+        </div>
+       </div>
+      <!-- ==============================landing-page============== -->
+
+
+      <!-- =====================================section one ======================= -->
+       <section>
+        <div>
+            <div class="grid grid-cols-12 gap-6 my-10">
+                <div class="lg:col-span-4 col-span-12 p-12 shadow-lg shadow-gray-600">
+                    <div>
+                        <div>
+                            <p class="font-bold text-[1.2rem]">Products Search</p>
+                        </div>
+                        <div class="flex items-center mt-6">
+                            <div><input type="text" placeholder="Search..." class="px-14 py-4 "></div>
+                            <div><button type="submit" class="text-white font-bold text-[1.1rem] px-6 py-4 bg-red-600">Search</button></div>
+                        </div>
+                        <div class="mt-6">
+                            <p class="font-bold text-[1.2rem]">Top Rated Products</p>
+                        </div>
+                        <div class="flex items-center justify-between mt-10 pb-2 border-b border-gray-600">
+                            <div class="leading-relaxed">
+                                <p class="font-bold text-[1.1rem] ">Air Filter Element</p>
+                                <p class="text-orange-400"><i class="fa-solid fa-star text-orange-400"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></p>
+                                <p class="text-gray-700">$79.00</p>
+                            </div>
+                            <div><img src="img/shop2.jpg" alt="" class="h-10 w-10"></div>
+                        </div>
+                        <div class="flex items-center justify-between mt-6 pb-2 border-b border-gray-600">
+                            <div class="leading-relaxed">
+                                <p class="font-bold text-[1.1rem] ">Motor Oil</p>
+                                <p class="text-orange-400"><i class="fa-solid fa-star text-orange-400"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></p>
+                                <p class="text-gray-700">$34.99</p>
+                            </div>
+                            <div><img src="img/shop3.jpg" alt="" class="h-10 w-10"></div>
+                        </div>
+                        <div class="flex items-center justify-between mt-6 pb-2 border-b border-gray-600">
+                            <div class="leading-relaxed">
+                                <p class="font-bold text-[1.1rem] ">Oil Filter</p>
+                                <p class="text-orange-400"><i class="fa-solid fa-star text-orange-400"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></p>
+                                <p class="text-gray-700">$19.99</p>
+                            </div>
+                            <div><img src="img/shop4.jpg" alt="" class="h-10 w-10"></div>
+                        </div>
+                        <div class="flex items-center justify-between mt-6 pb-2 border-b border-gray-600">
+                            <div class="leading-relaxed">
+                                <p class="font-bold text-[1.1rem] ">Wiper Blade</p>
+                                <p class="text-orange-400"><i class="fa-solid fa-star text-orange-400"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></p>
+                                <p class="text-gray-700">$26.99</p>
+                            </div>
+                            <div><img src="img/shop5.jpg" alt="" class="h-10 w-10"></div>
+                        </div>
+                        <div class="bg-red-700 flex flex-col justify-center text-center p-6 rounded-sm font-medium mt-8">
+                            
+                            <div id="serve">
+                                <p class="text-center text-2xl font-bold text-white">Products Categories</p>
+                            </div>
+                            <div class=" flex items-center ml-8 text-center mt-2 text-gray-300">
+                                <p class="text-[1.1rem]"><span><i class="fa-solid fa-arrow-right mr-2 text-sm"></i></span>Brakes</p>
+                            </div>
+                            <div class=" flex items-center ml-8 text-center mt-2 text-gray-300">
+                                <p class="text-[1.1rem]"><span><i class="fa-solid fa-arrow-right mr-2 text-sm"></i></span>Cleaning</p>
+                            </div>
+                            <div class=" flex items-center ml-8 text-center mt-2 text-gray-300">
+                                <p class="text-[1.1rem]"><span><i class="fa-solid fa-arrow-right mr-2 text-sm"></i></span>Cooling</p>
+                            </div>
+                            <div class=" flex items-center ml-8 text-center mt-2 text-gray-300">
+                                <p class="text-[1.1rem]"><span><i class="fa-solid fa-arrow-right mr-2 text-sm"></i></span>Electric</p>
+                            </div>
+                            <div class=" flex items-center ml-8 text-center mt-2 text-gray-300">
+                                <p class="text-[1.1rem]"><span><i class="fa-solid fa-arrow-right mr-2 text-sm"></i></span>Filters</p>
+                            </div>
+                            <div class=" flex items-center ml-8 text-center mt-2 text-gray-300">
+                                <p class="text-[1.1rem]"><span><i class="fa-solid fa-arrow-right mr-2 text-sm"></i></span>General</p>
+                            </div>
+                            <div class=" flex items-center ml-8 text-center mt-2 text-gray-300">
+                                <p class="text-[1.1rem]"><span><i class="fa-solid fa-arrow-right mr-2 text-sm"></i></span>Oil and Fluids</p>
+                            </div>
+                            <div class=" flex items-center ml-8 text-center mt-2 text-gray-300">
+                                <p class="text-[1.1rem]"><span><i class="fa-solid fa-arrow-right mr-2 text-sm"></i></span>Uncategorized</p>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <p class="font-bold text-2xl ">Filter by Price</p>
+                        </div>
+                        <div class="mt-4">
+                            <p>
+                                <div class="relative mb-6">
+                                    <label for="labels-range-input" class="sr-only">Labels range</label>
+                                    <input id="labels-range-input" type="range" value="1000" min="100" max="1500" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
+                                    <span class="text-sm text-gray-500 dark:text-gray-400 absolute start-0 -bottom-6">Min ($100)</span>
+                                    <span class="text-sm text-gray-500 dark:text-gray-400 absolute start-1/3 -translate-x-1/2 rtl:translate-x-1/2 -bottom-6">$500</span>
+                                    <span class="text-sm text-gray-500 dark:text-gray-400 absolute start-2/3 -translate-x-1/2 rtl:translate-x-1/2 -bottom-6">$1000</span>
+                                    <span class="text-sm text-gray-500 dark:text-gray-400 absolute end-0 -bottom-6">Max ($1500)</span>
+                                </div>
+                                </p>
+                        </div>
+                        <div class="flex items-center justify-between font-bold text-[1.2rem] mt-14">
+                            <div>Filter</div>
+                            <div>Price: $0 — $190</div>
+                        </div>
+
+                        <div>
+                            <p class="font-bold text-2xl mt-10">Payment</p>
+                        </div>
+                        <div class="mt-10">
+                            <p class="text-gray-600 text-[1.3rem]">The following payment methods are accepted in our shop:</p>
+                        </div>
+                        <div>
+                            <div class="mt-8">
+                                <img src="img/payment.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-8 col-span-12  p-12 shadow-lg shadow-gray-600">
+                    <div>
+                        <div>
+                            <p class="font-light text-[1.2rem]">Showing All 8 Results</p>
+                        </div>
+                        <div class="mt-8 gap-6 flex shadow-sm shadow-gray-600">
+                            <div class="">
+                                <div class= "object-contain"><img src="img/filter.jpg" alt="" class="hover:border-4 border-red-600 h-[270px] w-[270px] object-cover ease-in duration-300"></div>
+                                <div class="mt-6 leading-relaxed">
+                                    <p class="font-bold text-[1.2rem]">Air Filter Element</p>
+                                    <p class="text-red-600"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></p>
+                                    <p class="font-bold text-[1.1rem]">$75.99</p>
+                                    <p class="bg-red-600 mt-4 w-[120px] px-4 font-bold py-5 text-white">Add to Cart</p>
+                                </div>
+                            </div>
+                            <div class="relative">
+                                <div class= "object-contain relative"><img src="img/brakes pad.jpg" alt="" class="hover:border-4 border-red-600 h-[270px] w-[270px] object-cover ease-in duration-300 relative">
+                                <p class="absolute top-4 left-8 bg-red-600 px-6 py-2 text-white">Sale!</p>
+                            </div>
+                                <div class="mt-6 leading-relaxed">
+                                    <p class="font-bold text-[1.2rem]">Brakes Pads</p>
+                                    <p class="text-red-600"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></p>
+                                    <p class="font-bold text-[1.1rem] text-black"><span class="line-through text-gray-600 mr-2">$55.99</span> $47.99</p>
+
+                                    <p class="bg-red-600 mt-4 w-[120px] px-4 font-bold py-5 text-white">Add to Cart</p>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class= "object-contain"><img src="img/shop3.jpg" alt="" class="hover:border-4 border-red-600 h-[270px] w-[270px] object-cover ease-in duration-300"></div>
+                                <div class="mt-6 leading-relaxed">
+                                    <p class="font-bold text-[1.2rem]">Motor Oil</p>
+                                    <p class="text-red-600"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></p>
+                                    <p class="font-bold">$34.99</p>
+                                    <p class="bg-red-600 mt-4 w-[120px] px-4 font-bold py-5 text-white">Add to Cart</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-12 gap-6 flex shadow-sm shadow-gray-600">
+                            <div class="">
+                                <div class= "object-contain"><img src="img/shop-1.jpg" alt="" class="hover:border-4 border-red-600 h-[270px] w-[270px] object-cover ease-in duration-300"></div>
+                                <div class="mt-6 leading-relaxed">
+                                    <p class="font-bold text-[1.2rem]">Oil Filter</p>
+                                    <p class="text-red-600"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></p>
+                                    <p class="font-bold text-[1.1rem]">$15.99</p>
+                                    <p class="bg-red-600 mt-4 w-[120px] px-4 font-bold py-5 text-white">Add to Cart</p>
+                                </div>
+                            </div>
+                            <div class="relative">
+                                <div class= "object-contain"><img src="img/shop-2.jpg" alt="" class="hover:border-4 border-red-600 h-[270px] w-[270px] object-cover ease-in duration-300 relative">
+                             
+                            </div>
+                                <div class="mt-6 leading-relaxed">
+                                    <p class="font-bold text-[1.2rem]">Power Car Wax</p>
+                                    <p class="text-red-600"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></p>
+                                    <p class="font-bold text-[1.1rem] text-black"><span class="line-through text-gray-600 mr-2">$5.99</span> $47.99</p>
+
+                                    <p class="bg-red-600 mt-4 w-[120px] px-4 font-bold py-5 text-white">Add to Cart</p>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class= "object-contain"><img src="img/shop-3.jpg" alt="" class="hover:border-4 border-red-600 h-[270px] w-[270px] object-cover ease-in duration-300"></div>
+                                <div class="mt-6 leading-relaxed">
+                                    <p class="font-bold text-[1.2rem]">Radiator</p>
+                                    <p class="text-red-600"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></p>
+                                    <p class="font-bold">$134.99</p>
+                                    <p class="bg-red-600 mt-4 w-[120px] px-4 font-bold py-5 text-white">Add to Cart</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-12 gap-6 flex shadow-sm shadow-gray-600">
+                            <div class="">
+                                <div class= "object-contain"><img src="img/shop-4.jpg" alt="" class="hover:border-4 border-red-600 h-[250px] w-[250px] object-cover ease-in duration-300"></div>
+                                <div class="mt-6 leading-relaxed">
+                                    <p class="font-bold text-[1.2rem]">Spark Plug</p>
+                                    <p class="text-red-600"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></p>
+                                    <p class="font-bold text-[1.1rem]">$7.99</p>
+                                    <p class="bg-red-600 mt-4 w-[120px] px-4 font-bold py-5 text-white">Add to Cart</p>
+                                </div>
+                            </div>
+                            <div class="relative">
+                                <div class= "object-contain"><img src="img/shop-5.jpg" alt="" class="hover:border-4 border-red-600 h-[250px] w-[250px] object-cover ease-in duration-300 relative">
+                             
+                            </div>
+                                <div class="mt-6 leading-relaxed">
+                                    <p class="font-bold text-[1.2rem]">Wiper Blade</p>
+                                    <p class="text-red-600"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></p>
+                                    <p class="font-bold text-[1.1rem] text-black"><span class="line-through text-gray-600 mr-2">$27.99</span> $47.99</p>
+
+                                    <p class="bg-red-600 mt-4 w-[120px] px-4 font-bold py-5 text-white">Add to Cart</p>
+                                </div>
+                            </div>
+                            <div class="">
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+       </section>
+      <!-- =====================================section one ======================= -->
+
+
+
+
+      <!--==================================== footer part======================= -->
+      <div>
+        <footer class="bg-primary text-white">
+            <div class="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Company Info -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">About Us</h3>
+                        <p class="text-gray-400">Your trusted car fix company offering a wide range of services to keep your vehicle in top condition.</p>
+                    </div>
+                    <!-- Services -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Services</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-oil-can footer-icon mr-2"></i> Lube Service
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-tools footer-icon mr-2"></i> General Maintenance
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-car-battery footer-icon mr-2"></i> Battery Replacement
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-car-crash footer-icon mr-2"></i> Collision Repair
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-car-side footer-icon mr-2"></i> Tire Change
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Contact Info -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                        <p class="text-gray-400">No1 Idowu Crescent Adalemo Bus Stop Sango Ota Ogun state</p>
+                        <p class="text-gray-400">Email: judeorifa28@gmail.com</p>
+                        <p class="text-gray-400">Phone: <a href="tel:+2348068078495">(123) 456-7890</a></p>
+                        <div class="mt-4 flex space-x-3">
+                            <a href="https://www.facebook.com/profile.php?id=100089710500872&mibextid=LQQJ4d" class="footer-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="http://www.twitter.com" class="footer-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="footer-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="https://wa.me/+2348068078495" class="footer-icon"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-white mt-8 pt-4 text-center text-gray-400">
+                    © 2024 Jude Auto Hub Company. All rights reserved.
+                </div>
+            </div>
+        </footer>
+      </div>
+
+      <!--==================================== footer part======================= -->
+ 
+    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- remix icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+  /> 
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<style>
+    
+    /* .tool1 { top: 0; left: 50%; transform: translate(-50%, -50%); }
+        .tool2 { top: 50%; right: 0; transform: translate(50%, -50%); }
+        .tool3 { bottom: 0; left: 50%; transform: translate(-50%, 50%); }
+        .tool4 { top: 50%; left: 0; transform: translate(-50%, -50%); } */
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .rotating {
+            animation: rotate 10s linear infinite;
+        }
+        .circle {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: auto;
+        }
+        .circle div {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+        }
+        li:hover .group{
+            display: block;
+          
+        }
+        .group ul li a:hover{
+            color: #6B1019;
+            transition: ease-in 0.4s;
+        }
+     
+
+        .box-content {
+            position: relative;
+            transition: transform 0.3s;
+        }
+
+        .box-content:hover .text-container {
+            transform: translateY(-30px);
+        }
+
+        .read-more {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .box-content:hover .read-more {
+            opacity: 1;
+        }
+
+
+</style>
+
+<nav class="bg-primary  text-white border-gray-200  font-Roboto fixed w-[100%] z-50 top-0">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="img/car-repair.svg" class="h-8" alt="Jude auto hub logo">
+        <span class="self-center text-[1.2rem] font-semibold whitespace-nowrap dark:text-white">Jude Auto Hub</span>
+    </a>
+    <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse  ">
+        <button type="button" class="text-white  border ease-in duration-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-3 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 xm:hidden"><a href="appointment.html">Appointment</a></button>
+        <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <div>
+            <div id="menu-icon"><i class="ri-menu-3-line text-2xl"></i></div>
+          </div>
+      </button>
+    </div>
+    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="menu">
+      <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
+        <li>
+          <a href="index.html" class="block py-2 px-3   rounded md:bg-transparent md:p-0" aria-current="page">Home</a>
+        </li>
+        <li>
+          <a href="about.html" class="block py-2 px-3 rounded md:hover:bg-transparent  md:p-0   ">About</a>
+        </li>
+        <li class="relative ease-in duration-500">
+          <a href="service.html" class="block py-2 px-3 rounded  md:hover:bg-transparentt md:p-0 text-red-600">Services</a>
+          <div class="bg-black absolute rounded-sm hidden group ease-in duration-300">
+            <ul class="px-6 py-3 flex flex-col text-sm gap-2 ">
+                <li class="p-2 rounded-md hover:bg-gray-800 ease-in duration-300 border-b border-white"><a href="ac.html">A/C service</a></li>
+                <li class="p-2 rounded-md hover:bg-gray-800 ease-in duration-300 border-b border-white"><a href="brake.html">Brake Repair</a></li>
+                <li class="p-2 rounded-md hover:bg-gray-800 ease-in duration-300 border-b border-white"><a href="engine.html">Engine Repair</a></li>
+                <li class="p-2 rounded-md hover:bg-gray-800 ease-in duration-300 border-b border-white"><a href="oil.html">Oil Change</a></li>
+                <li class="p-2 rounded-md hover:bg-gray-800 ease-in duration-300 border-b border-white"><a href="tire.html">Tire Change</a></li>
+                <li class="p-2 rounded-md hover:bg-gray-800 ease-in duration-300 border-b border-white"><a href="performance.html">Performance</a></li>
+            </ul>
+ 
+          </div>
+        </li>
+        <li>
+          <a href="blog.html" class="block py-2 px-3 rounded   md:p-0 ">Blog</a>
+        </li>
+        <li>
+          <a href="shop.html" class="block py-2 px-3 rounded   md:p-0   ">Shop</a>
+        </li>
+        <li>
+          <a href="contact.html" class="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent  md:p-0   ">Contact</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+      </nav>
+    <!-- ==============================landing-page============== -->
+    <div style="background-image: url(img/blog-landing-page.jpg);background-position: center;background-size: cover;" class="relative">
+        
+        <div class="p-4 flex flex-col justify-center items-center">
+            <div class="mt-40 font-Roboto">
+                <p class="text-white text-4xl font-semibold text-center">We Keep Your Engine Running</p>
+            </div>
+            <div class="mt-4 font-light text-center">
+                <p class="text-[1.1rem] text-white"> Regular maintenance is key to the longevity and performance of your vehicle. <br>From oil changes and tire rotations to comprehensive inspections,<br> we ensure your car is always in peak condition.</p>
+            </div>
+            <div class="mt-4 p-6">
+              <button class="text-black py-3 px-8 rounded-md bg-blue-100 "><a href="#serve">Our Services</a></button>
+            </div>
+        </div>
+
+        <div class=" absolute top-36 lg:ml-14 sm:ml-2">
+                <div>
+                 
+                    <div class=" h-[300px] w-[300px] rounded-full lg:ml-14 sm:ml-2">
+                        <img src="img/rotate.jpg" alt="" class=" rounded-full rotating circle">
+                    </div>
+            <!-- <div class="circle rotating text-[3rem] bg-[#650F16] h-[500px] w-[500px] rounded-full">
+          <div class="tool1"><i class="fa-solid fa-wrench text-[3rem]"></i></div>
+          <div class="tool2"><i class="fa-solid fa-wrench text-[3rem]"></i></div>
+          <div class="tool3"><i class="fa-solid fa-wrench text-[3rem]"></i></div>
+          <div class="tool4"><i class="fa-solid fa-wrench text-[3rem]"></i></div>
+      </div> -->
+    
+                </div>
+        </div>
+
+       </div>
+      <!-- ==============================landing-page============== -->
+
+      <!-- ==============================section1 services=============== -->
+      <div class="container mx-auto mt-12 p-4 font-Roboto">
+        <div class=" mx-auto p-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-4 rounded-lg shadow-lg box-content ease-in duration-500">
+                    <img src="img/service a.jpg" alt="Placeholder Image" class="w-full object-cover rounded-t-lg">
+                    <div class="px-6 py-4 text-container bg-whi ease-in duration-500 bg-white ">
+                        <h3 class="text-xl font-bold mb-2">AC Service</h3>
+                        <p class="text-gray-700 leading-relaxed ">The air conditioning system or your car is a sealed system. In closed systems the only way you lose fluid is when you have a leak…</p>
+                        <p class="ease-in duration-300 read-more text-red-600 font-bold underline mt-6"><a href="ac.html">Read more</a> <i class="ri-arrow-right-line"></i></p>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-lg box-content ease-in duration-500">
+                    <img src="img/service b.jpg" alt="Placeholder Image" class="w-full object-cover rounded-t-lg">
+                    <div class="px-6 py-4 text-container bg-whi ease-in duration-500 bg-white">
+                        <h3 class="text-xl font-bold mb-2">Brake Repair</h3>
+                        <p class="text-gray-700 leading-relaxed ">When it comes to brakes you shouldn’t wait until brake repairs are needed. If the owner continues to drive the vehicle while…</p>
+                        <p class="ease-in duration-300 read-more text-red-600 font-bold underline mt-6"><a href="brake.html">Read more</a> <i class="ri-arrow-right-line"></i></p>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-lg box-content ease-in duration-500">
+                    <img src="img/service c.jpg" alt="Placeholder Image" class="w-full object-cover rounded-t-lg">
+                    <div class="px-6 py-4 text-container bg-whi ease-in duration-500 bg-white">
+                        <h3 class="text-xl font-bold mb-2">Engine Repair</h3>
+                        <p class="text-gray-700 leading-relaxed ">If your engine isn’t working properly chances are you’re in for a costly repair. An engine replacement can set you…</p>
+                        <p class="ease-in duration-300 read-more text-red-600 font-bold underline mt-6"><a href="engine.html">Read more</a> <i class="ri-arrow-right-line"></i></p>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-lg box-content ease-in duration-500">
+                    <img src="img/service d.jpg" alt="Placeholder Image" class="w-full object-cover rounded-t-lg">
+                    <div class="px-6 py-4 text-container bg-whi ease-in duration-500 bg-white">
+                        <h3 class="text-xl font-bold mb-2">Oil Change</h3>
+                        <p class="text-gray-700 leading-relaxed ">Your vehicle is one of the biggest investments you’ll make. With preventative maintenance you can keep it running smoothly and…</p>
+                        <p class="ease-in duration-300 read-more text-red-600 font-bold underline mt-6"><a href="oil.html">Read more</a> <i class="ri-arrow-right-line"></i></p>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-lg box-content ease-in duration-500">
+                    <img src="img/service e.jpg" alt="Placeholder Image" class="w-full object-cover rounded-t-lg">
+                    <div class="px-6 py-4 text-container bg-whi ease-in duration-500 bg-white">
+                        <h3 class="text-xl font-bold mb-2">Tire Change</h3>
+                        <p class="text-gray-700 leading-relaxed ">Generally speaking, tires should be rotated every 6,000 to 8,000 miles. A technician can thoroughly inspect your tires as well…</p>
+                        <p class="ease-in duration-300 read-more text-red-600 font-bold underline mt-6"><a href="tire.html">Read more</a> <i class="ri-arrow-right-line"></i></p>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-lg box-content ease-in duration-500">
+                    <img src="img/service f.jpeg" alt="Placeholder Image" class="w-full object-cover rounded-t-lg">
+                    <div class="px-6 py-4 text-container bg-whi ease-in duration-500 bg-white">
+                        <h3 class="text-xl font-bold mb-2">Performance</h3>
+                        <p class="text-gray-700 leading-relaxed ">We offer a broad range of performance products from engine, driveline and chassis tuning components. These fully…</p>
+                        <p class="ease-in duration-300 read-more text-red-600 font-bold underline mt-6"><a href="pero">Read more</a> <i class="ri-arrow-right-line"></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+       </div>
+      <!-- ==============================section1 services=============== -->
+
+      <div>
+        <footer class="bg-blue-900 text-white">
+            <div class="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Company Info -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">About Us</h3>
+                        <p class="text-gray-400">Your trusted car fix company offering a wide range of services to keep your vehicle in top condition.</p>
+                    </div>
+                    <!-- Services -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Services</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-oil-can footer-icon mr-2"></i> Lube Service
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-tools footer-icon mr-2"></i> General Maintenance
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-car-battery footer-icon mr-2"></i> Battery Replacement
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-car-crash footer-icon mr-2"></i> Collision Repair
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-car-side footer-icon mr-2"></i> Tire Change
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Contact Info -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                        <p class="text-gray-400">No1 Idowu Crescent Adalemo Bus Stop Sango Ota Ogun state</p>
+                        <p class="text-gray-400">Email: judeorifa28@gmail.com</p>
+                        <p class="text-gray-400">Phone: <a href="tel:+2348068078495">(123) 456-7890</a></p>
+                        <div class="mt-4 flex space-x-3">
+                            <a href="https://www.facebook.com/profile.php?id=100089710500872&mibextid=LQQJ4d" class="footer-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="http://www.twitter.com" class="footer-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="footer-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="https://wa.me/+2348068078495" class="footer-icon"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-white mt-8 pt-4 text-center text-gray-400">
+                    © 2024 Jude Auto Hub Company. All rights reserved.
+                </div>
+            </div>
+        </footer>
+      </div>
+
+ 
+</body>
+</html>

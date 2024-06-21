@@ -1,0 +1,986 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- remix icon -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/> 
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+
+  <style>
+        input::placeholder{
+      color: white;
+    }
+    html{
+    scroll-behavior: smooth;
+  }
+    .section3{
+      background-color: rgba(245, 245, 245, 0.596);
+    }
+
+   
+    .service:hover .icon{
+      background-color: whitesmoke;
+      color: #001219;
+      transition: ease-in 0.3s;
+     
+    }
+    .service:hover{
+      background-color: #001219;
+      opacity: 60;
+      transition: ease-in 2.3s;
+    
+    }
+    .service:hover .service-text{
+      color: white;
+      transition: ease-in 0.3s;
+    }
+    .footer-icon {
+            transition: transform 0.3s ease;
+        }
+        .footer-icon:hover {
+            transform: scale(1.2);
+        }
+        .circle {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: auto;
+        }
+        .circle div {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #3490dc; /* Customize tool color */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+        }
+        .tool1 { top: 0; left: 50%; transform: translate(-50%, -50%); }
+        .tool2 { top: 50%; right: 0; transform: translate(50%, -50%); }
+        .tool3 { bottom: 0; left: 50%; transform: translate(-50%, 50%); }
+        .tool4 { top: 50%; left: 0; transform: translate(-50%, -50%); }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .rotating {
+            animation: rotate 10s linear infinite;
+        }
+
+
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .slide-up {
+            animation: slideUp 2s ease-in-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .slide-in-right {
+            animation: slideInRight 2s ease-in-out;
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+    
+        .slide-in-bottom {
+            animation: slideInBottom 2s ease-in-out;
+        }
+
+        @keyframes slideInBottom {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .slide-in-top {
+            animation: slideInTop 2s ease-in-out;
+        }
+
+        @keyframes slideInTop {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .zoom:hover .image-zoom{
+          transform: scale(1.1);
+          transition: ease-in 0.5s;
+        }
+      
+        li:hover .group{
+            display: block;
+          
+        }
+        .group ul li a:hover{
+            color: #6B1019;
+            transition: ease-in 0.4s;
+        }
+   
+  </style>
+  <!-- ====================nav bar side========================== -->
+ 
+
+  <nav class="bg-primary  text-white border-gray-200  font-Roboto fixed w-[100%] z-50 top-0">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="img/car-repair.svg" class="h-8" alt="Jude auto hub logo">
+        <span class="self-center text-[1.2rem] font-semibold whitespace-nowrap dark:text-white">Jude Auto Hub</span>
+    </a>
+    <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse  ">
+        <button type="button" class="text-white  border ease-in duration-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-3 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 xm:hidden"><a href="appointment.html">Appointment</a></button>
+        <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <div>
+            <div id="menu-icon"><i class="ri-menu-3-line text-2xl"></i></div>
+          </div>
+      </button>
+    </div>
+    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="menu">
+      <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
+        <li>
+          <a href="index.html" class="block py-2 px-3   rounded md:bg-transparent md:p-0 text-red-600" aria-current="page">Home</a>
+        </li>
+        <li>
+          <a href="about.html" class="block py-2 px-3 rounded md:hover:bg-transparent  md:p-0   ">About</a>
+        </li>
+        <li class="relative ease-in duration-500">
+          <a href="service.html" class="block py-2 px-3 rounded  md:hover:bg-transparentt md:p-0  ">Services</a>
+          <div class="bg-black absolute rounded-sm hidden group ease-in duration-300">
+            <ul class="px-6 py-3 flex flex-col text-sm gap-2 ">
+                <li class="p-2 rounded-md hover:bg-gray-800 ease-in duration-300 border-b border-white"><a href="ac.html">A/C service</a></li>
+                <li class="p-2 rounded-md hover:bg-gray-800 ease-in duration-300 border-b border-white"><a href="brake.html">Brake Repair</a></li>
+                <li class="p-2 rounded-md hover:bg-gray-800 ease-in duration-300 border-b border-white"><a href="engine.html">Engine Repair</a></li>
+                <li class="p-2 rounded-md hover:bg-gray-800 ease-in duration-300 border-b border-white"><a href="oil.html">Oil Change</a></li>
+                <li class="p-2 rounded-md hover:bg-gray-800 ease-in duration-300 border-b border-white"><a href="tire.html">Tire Change</a></li>
+                <li class="p-2 rounded-md hover:bg-gray-800 ease-in duration-300 border-b border-white"><a href="performance.html">Performance</a></li>
+            </ul>
+ 
+          </div>
+        </li>
+        <li>
+          <a href="blog.html" class="block py-2 px-3 rounded   md:p-0 ">Blog</a>
+        </li>
+        <li>
+          <a href="shop.html" class="block py-2 px-3 rounded   md:p-0   ">Shop</a>
+        </li>
+        <li>
+          <a href="contact.html" class="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent  md:p-0   ">Contact</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+      </nav>
+  
+  <!-- ====================nav bar side========================== -->
+
+  <!-- ======================landing page======================== -->
+  <div class="relative">
+  <div id="controls-carousel" class="relative w-full h-screen" data-carousel="static">
+    <!-- Carousel wrapper -->
+    <div class="relative overflow-hidden  rounded-lg md:h-[100%] h-screen ">
+         <!-- Item 1 -->
+        <div class=" duration-700 ease-in-out " data-carousel-item = "active">
+            <img src="img/landing-page-1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 h-screen" alt="...">
+            <div class="flex flex-col justify-center items-center w-[100%] h-[100%] absolute">
+              <div class="slide-in-bottom">
+                <p class="text-white font-medium  text-center md:text-7xl xm:text-4xl">Looking for the <br>Right Vehicle Repair <br> Service?</p>
+              </div>
+              <div>
+                <p class="text-center font-light mt-9 text-white slide-in-bottom">Experience fast, reliable car repairs from our team of expert mechanics, ensuring your <br>vehicle is back on the road safely and efficiently,<br> so you can drive worry-free!"</p>
+              </div>
+              <div class="flex items-center justify-center gap-2 mt-4 md:flex-row flex-col slide-in-bottom">
+                <div class="flex items-center">
+                  <button class="text-white px-8 py-4 rounded-md flex items-center bg-[#001219] font-medium"><a href="appointment.html">Make an appointment </a><span class="font-extralight text-sm ml-3"><i class="fa-solid fa-arrow-right "></i></span></button>
+                </div>
+                <div class="flex items-center slide-in-bottom">
+                  <button class="text-white flex items-center px-6 py-4 rounded-md bg-red-600 font-medium">See services <span class="font-extralight text-sm ml-3"><i class="fa-solid fa-arrow-right"></i></span></button>
+                </div>
+              </div>
+            </div>
+        </div>
+        <!-- Item 2 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="img/landing-page-2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 h-screen" alt="...">
+            <div class="flex flex-col justify-center items-center w-[100%] h-[100%] absolute">
+              <div>
+                <p class="text-white font-medium md:text-5xl xm:text-4xl text-center slide-in-bottom">Best Auto Repair <br> Shop and <br>Maintenance <br> Services</p>
+              </div>
+              <div>
+                <p class="text-center font-light mt-9 text-white slide-in-bottom">Experience fast, reliable car repairs from our team of expert mechanics, ensuring your <br>vehicle is back on the road safely and efficiently,<br> so you can drive worry-free!"</p>
+              </div>
+              <div class="flex items-center justify-center gap-2 mt-4 md:flex-row flex-col slide-in-bottom">
+                <div class="flex items-center">
+                  <button class="text-white px-8 py-4 rounded-md flex items-center bg-red-600 font-medium">Make an appointment <span class="font-extralight text-sm ml-3"><i class="fa-solid fa-arrow-right "></i></span></button>
+                </div>
+                <div class="flex items-center">
+                  <button class="text-white flex items-center px-6 py-4 rounded-md bg-primary font-medium">See services <span class="font-extralight text-sm ml-3"><i class="fa-solid fa-arrow-right"></i></span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- Item 3 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="img/landing-page-3.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 h-screen" alt="...">
+            <div class="flex flex-col justify-center items-center w-[100%] h-[100%] absolute slide-in-bottom">
+              <div>
+                <p class="text-white font-medium md:text-5xl xm:text-4xl text-center">Best Auto Repair <br> Shop and <br>Maintenance <br> Services</p>
+              </div>
+              <div>
+                <p class="text-center font-light mt-9 text-white">Experience fast, reliable car repairs from our team of expert mechanics, ensuring your <br>vehicle is back on the road safely and efficiently,<br> so you can drive worry-free!"</p>
+              </div>
+              <div class="flex items-center justify-center gap-2 mt-4 md:flex-row flex-col">
+                <div class="flex items-center">
+                  <button class="text-white px-8 py-4 rounded-md flex items-center bg-red-600 font-medium">Make an appointment <span class="font-extralight text-sm ml-3"><i class="fa-solid fa-arrow-right "></i></span></button>
+                </div>
+                <div class="flex items-center">
+                  <button class="text-white flex items-center px-6 py-4 rounded-md bg-primary font-medium">See services <span class="font-extralight text-sm ml-3"><i class="fa-solid fa-arrow-right"></i></span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+    </div>
+    <!-- Slider controls -->
+    <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+            </svg>
+            <span class="sr-only">Previous</span>
+        </span>
+    </button>
+    <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            </svg>
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
+     
+    <div class="absolute flex justify-center items-center  font-Roboto   lg:mx-20 lg:-bottom-52" style=" z-index: 40;">
+   
+    <div class="z-50 left-0 w-full grid lg:grid-cols-3  grid-cols-1 md:px-10 px-2">
+      <div class="bg-[#001219]  text-white py-12 px-5 leading-relaxed slide-in-bottom">
+        <div class="text-center font-medium">
+          <p class="text-2xl">Contact details</p>
+        </div>
+        <div class="flex gap-20  text-[1.2rem] mt-5">
+          <div><p>Call us:</p></div>
+          <div><a href="tel:+2348068078495">08068078495</a></div> 
+        </div>
+        <div class="flex gap-16 text-[1.2rem] mt-6" >
+          <div><p>Location:</p></div>
+          <div><p>Nigeria Ogun state ,Sango</p></div>
+        </div>
+        <div class="flex gap-10 text-[1.2rem] mt-6" >
+          <div><p>Work Hours:</p></div>
+          <div><p>Monday - Friday 8:00AM-8:00PM
+            Sunday - Closed</p></div>
+        </div>
+      </div>
+      <form class="bg-red-600  text-white py-6 px-5 leading-relaxed slide-in-bottom"  action="https://formspree.io/f/xeqyygvd" method="post">
+        <div class="text-center font-medium">
+          <p class="text-2xl">Make an appointment</p>
+        </div>
+        <div class="flex md:flex-row flex-col gap-3 px-6  text-[1.2rem] mt-5 text-white justify-center items-center">
+          <div class="text-white flex justify-center items-center"><input type="text" placeholder="Your Full Name" name="full name" required class="rounded-md bg-transparent md:w-[150px] border-white w-[320px] text-white"></div>
+          <div class="text-white flex justify-center items-center"><input type="text" placeholder="Email" name="Email" required class=" rounded-md bg-transparent border-white md:w-[150px] w-[320px] text-white"></div>
+        </div>
+        <div class="flex md:flex-row flex-col gap-3  text-[1.2rem] mt-4 text-white justify-center items-center">
+          <div class="text-white flex justify-center items-center"><input type="text" placeholder="Your Phone-No" name="phone no" required class="rounded-md bg-transparent md:w-[150px] w-[320px] text-white border-white"></div>
+          <div class="text-white flex justify-center items-center"><input type="text" placeholder="Services" name="services" required class="rounded-md bg-transparent md:w-[150px] w-[320px] text-white border-white"></div>
+        </div>
+        <div class="flex justify-center mt-6">
+          <input type="text" placeholder="message" name="message" required class="text-white bg-transparent py-5 w-[320px] rounded-md border-white">
+        </div>
+        <div class="flex justify-center items-center mt-4 ">
+          <button class="text-primary py-4 w-[320px] bg-white rounded-md">Send message</button>
+        </div>
+      </form>
+      <div class="bg-[#001219]  text-white md:py-12 py-6 px-5 leading-relaxed flex flex-col justify-center items-center slide-in-bottom">
+        <div class="text-center font-medium">
+          <p class="text-2xl">Maintainance service</p>
+        </div>
+       <div class="mt-7 font-medium text-center ">
+        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast.</p>
+       </div>
+       <div class="mt-10 ml-2  flex justify-start">
+        <button class="text-sm text-primary bg-white px-5 py-3 rounded-md">MORE SERVICES</button>
+       </div> 
+      </div>
+    </div>
+  </div>
+ 
+</div>
+
+
+ 
+      </div> 
+    </div>
+    <br><br>
+      
+      <!-- landing page -->
+
+  <!-- ======================landing page======================== -->
+
+
+  <!-- ========================sectino 1========================= -->
+  <section class="section3 bottom-0 py-20 lg:ml-4 ml-4 lg:mt-36 mt-[1000px] overflow-hidden">
+    <div class="grid grid-cols-10 overflow-hidden">
+      <div class="bg-blue-600 lg:col-span-4 col-span-10"  data-aos="fade-right"  data-aos-duration="2000">
+        <img src="img/section-1.jpg" alt="" class="w-[100%]">
+      </div>
+      <div class="section3 bg-red-600 lg:col-span-6 col-span-10 lg:pl-16 xm:pl-0 py-14">
+        <div>
+          <p class="text-red-600  font-bold ">SERVICES</p>
+        </div>
+        <div>
+          <p class="text-black text-3xl font-medium mt-6">WHY CHOOSE US</p>
+        </div>
+
+
+     
+        <div class="grid grid-cols-10 gap-5 mt-10">
+          <div class="bg-white rounded-md shadow-lg shadow-red-100  md:col-span-5 col-span-10 p-4"  data-aos="fade-down-right" data-aos-duration="2000">
+            <div class="flex items-center gap-6 justify-center">
+              <div class="texto text-8xl text-red-600 "><i class="fa-solid fa-gear"></i></div>
+              <div class="texti">
+                <p class="texti mt-2 text-black font-medium text-2xl">Expert Mechanic</p>
+              </div>
+            </div>
+
+            <div class="">
+              <p class="texti text-primary text-[1.2rem] leading-loose mt-4 text-center">Far far away, behind the word mountains, far from the countries Vokalia.</p>
+            </div>
+          </div>
+          <div class="bg-white rounded-md shadow-lg shadow-red-100  md:col-span-5 col-span-10 p-4" data-aos="fade-down-left" data-aos-duration="2000">
+            <div class="flex items-center gap-6 justify-center">
+              <div class="texto text-8xl text-red-600 "><i class="fa-solid fa-taxi"></i></div>
+              <div class="texti">
+                <p class="texti mt-2 text-black font-medium text-2xl">Convenient Place</p>
+              </div>
+            </div>
+
+            <div class="">
+              <p class="texti text-primary text-[1.2rem] leading-loose mt-4 text-center">Far far away, behind the word mountains, far from the countries Vokalia.</p>
+            </div>
+          </div>
+          <div class="bg-white shadow-lg shadow-red-100 rounded-md  md:col-span-5 col-span-10 p-4"data-aos="fade-up-right" data-aos-duration="2000">
+            <div class="flex items-center gap-6 justify-center">
+              <div class="texto text-8xl text-red-600 "><i class="fa-solid fa-screwdriver-wrench"></i></i></div>
+              <div class="texti ">
+                <p class="texti mt-2 text-black font-medium text-2xl">Modern Equipment</p>
+              </div>
+            </div>
+
+            <div class="">
+              <p class="texti text-primary text-[1.2rem] leading-loose mt-4 text-center">Far far away, behind the word mountains, far from the countries Vokalia.</p>
+            </div>
+          </div>
+          <div class="bg-white rounded-md shadow-lg shadow-red-100  md:col-span-5 col-span-10 p-4" data-aos="fade-up-right" data-aos-duration="2000">
+            <div class="flex items-center gap-6 justify-center">
+              <div class="texto text-8xl text-red-600 "><i class="fa-solid fa-clock"></i></div>
+              <div class="texti">
+                <p class="texti mt-2 text-black font-medium text-2xl">Fast Service Delivery</p>
+              </div>
+            </div>
+
+            <div class="">
+              <p class="texti text-primary text-[1.2rem] leading-loose mt-4 text-center">Far far away, behind the word mountains, far from the countries Vokalia.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+   </section>
+   <!-- ==================section1============= -->
+  <!-- ========================sectino 1========================= -->
+
+
+
+         <!-- ==================section1============= -->
+
+         <section class="font-Roboto">
+          <div class="relative"><div style="background-image: url(img/overlay.jpg); background-position: center; background-size: cover; width: 100%;height: 40vh;"></div>
+          <div class="flex lg:flex-row flex-col text-center justify-center gap-28 items-center absolute top-0 bg-black bg-opacity-80 w-full h-[100%]">
+            <div class="text-white font-medium text-[1.3rem] ">
+              <p>Book your appointment today</p>
+              <p class="text-3xl font-bold mt-4">Schedule Your Appointment Today</p>
+            </div>
+            <div class="shake">
+              <button class="text-sm font-bold text-red-600 px-12 rounded-md py-5 bg-white">MAKE AN APPOINTMENT</button>
+            </div>
+          </div>
+          </div>
+         
+         </section 
+  
+         <!-- =====================services section======================= -->
+
+
+          <section class="section3 py-20 md:px-10 xm:px-2">
+            <div>
+              <div>
+                <p class="text-red-600 text-center font-bold">JUDE AUTO HUB SERVICES</p>
+              </div>
+              <div>
+                <p class="text-center font-2xl text-primary text-4xl mt-3 leading-relaxed font-light">This is our some of the <br>
+                  many auto repair services we offer</p>
+              </div>
+            </div>
+
+            <!-- carousel 1 starting-->
+            <div class="container mx-auto py-10">
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-white p-4 m-2 shadow rounded"data-aos="flip-right"data-aos-duration="1500">
+                  <div class=" service md:col-span-2 col-span-12 bg-white rounded-md ease-in duration-200">
+                    <div class="service flex flex-col justify-center items-center py-8 px-2">
+                      <div><p class="icon bg-primary text-white rounded-full flex justify-center items-center"><i class="fa-solid fa-gears text-6xl rounded-full w-24 h-24 flex justify-center items-center"></i></p></div>
+                      <div class="service-text text-2xl text-black mt-6 text-center font-semibold"><p>General Auto <br>Repair & <br>Maintenance</p></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-white p-4 m-2 shadow rounded" data-aos="flip-right"data-aos-duration="2000">
+                  <div class="service md:col-span-2 col-span-12 bg-white rounded-md ease-in duration-200">
+                    <div class="service flex flex-col justify-center items-center py-8 px-2">
+                      <div><p class="icon bg-primary text-white rounded-full flex justify-center items-center"><img src="img/brake.png" alt="" class="w-24 h-24 rounded-full"></p></div>
+                      <div class="service-text text-2xl text-black mt-6 text-center font-semibold"><p>Brake Repair<br>& Replacemnt</p></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-white p-4 m-2 shadow rounded"data-aos="flip-right"data-aos-duration="2500">
+                  <div class=" service md:col-span-2 col-span-12 bg-white rounded-md ease-in duration-200">
+                    <div class="service flex flex-col justify-center items-center py-8 px-2">
+                      <div><p class="icon bg-primary text-white rounded-full flex justify-center items-center">  <i class="fas fa-radiation text-6xl rounded-full w-24 h-24 flex justify-center items-center"></i></p></div>
+                      <div class="service-text text-2xl text-black mt-6 text-center font-semibold leading-relaxed"><p>Air Condition<br>AC/Repair</p></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-white p-4 m-2 shadow rounded"data-aos="flip-right"data-aos-duration="3000">
+                  <div class=" service md:col-span-2 col-span-12 bg-white rounded-md ease-in duration-200">
+                    <div class="service flex flex-col justify-center items-center py-8 px-2">
+                      <div><p class="icon bg-primary text-white rounded-full flex justify-center items-center">  <i class="fa-brands fa-phabricator text-6xl rounded-full w-24 h-24 flex justify-center items-center"></i></p></div>
+                      <div class="service-text text-2xl text-black mt-6 text-center font-semibold leading-relaxed"><p>Tire Repair<br>and Replacement</p></div>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="bg-white p-4 m-2 shadow rounded"data-aos="flip-left"data-aos-duration="1500">
+                  <div class=" service md:col-span-2 col-span-12 bg-white rounded-md ease-in duration-200">
+                    <div class="service flex flex-col justify-center items-center py-8 px-2">
+                      <div><p class="icon bg-primary text-white rounded-full flex justify-center items-center"><i class="fa-solid fa-gears text-6xl rounded-full w-24 h-24 flex justify-center items-center"></i></p></div>
+                      <div class="service-text text-2xl text-black mt-6 text-center font-semibold"><p>General Auto <br>Repair & <br>Maintenance</p></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-white p-4 m-2 shadow rounded" data-aos="flip-left"data-aos-duration="2000">
+                  <div class="service md:col-span-2 col-span-12 bg-white rounded-md ease-in duration-200">
+                    <div class="service flex flex-col justify-center items-center py-8 px-2">
+                      <div><p class="icon bg-primary text-white rounded-full flex justify-center items-center"><img src="img/brake.png" alt="" class="w-24 h-24 rounded-full"></p></div>
+                      <div class="service-text text-2xl text-black mt-6 text-center font-semibold"><p>Brake Repair<br>& Replacemnt</p></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-white p-4 m-2 shadow rounded"data-aos="flip-left"data-aos-duration="2500">
+                  <div class=" service md:col-span-2 col-span-12 bg-white rounded-md ease-in duration-200">
+                    <div class="service flex flex-col justify-center items-center py-8 px-2">
+                      <div><p class="icon bg-primary text-white rounded-full flex justify-center items-center">  <i class="fas fa-radiation text-6xl rounded-full w-24 h-24 flex justify-center items-center"></i></p></div>
+                      <div class="service-text text-2xl text-black mt-6 text-center font-semibold leading-relaxed"><p>Air Condition<br>AC/Repair</p></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-white p-4 m-2 shadow rounded"data-aos="flip-left"data-aos-duration="3000">
+                  <div class=" service md:col-span-2 col-span-12 bg-white rounded-md ease-in duration-200">
+                    <div class="service flex flex-col justify-center items-center py-8 px-2">
+                      <div><p class="icon bg-primary text-white rounded-full flex justify-center items-center">  <i class="fa-brands fa-phabricator text-6xl rounded-full w-24 h-24 flex justify-center items-center"></i></p></div>
+                      <div class="service-text text-2xl text-black mt-6 text-center font-semibold leading-relaxed"><p>Tire Repair<br>and Replacement</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+  <!--========================= booking section================ -->
+         <section class="bg-[#F0F0F0] py-10">
+          <div>
+            <div>
+              <p class="text-red-600 font-bold text-center">BOOK AN APPOINTMENT</p>
+            </div>
+            <div>
+              <p class="text-black text-5xl font-semibold text-center mt-4">Get Car Repair In Easy Steps</p>
+            </div>
+            <div class="lg:px-32 xm:px-2 mt-14 grid grid-cols-10 lg:gap-0 xm:gap-6 justify-center items-start">
+              <div class=" lg:col-span-2 col-span-10">
+             <div class="bg-white flex justify-center relative items-center  py-12  rounded-md"><i class="fa-solid fa-gears text-6xl "></i>
+              <div class="absolute top-0 right-0 bg-red-600 p-2 text-white">01</div>
+            </div>
+            <div class="text-center mt-4 text-2xl text-primary font-medium">Get a Free Quote</div>
+            <div class=" mt-3 text-center text-primary font-light text-[1.1rem]">
+              Far far away, behind the word mountains, far from the countries Vokalia.
+            </div>
+              </div>
+              <div class="lg:flex hidden border-dashed gap-4  justify-center items-center mt-20 border-b border-primary md:col-span-2 col-span-10"></div>
+              <div class=" lg:col-span-2 col-span-10">
+                <div class="bg-primary flex justify-center relative items-center py-12  rounded-md"><i class="fa-solid fa-gears text-6xl text-white "></i>
+                  <div class="absolute top-0 right-0 bg-white p-2 text-black">02</div>
+                </div>
+                <div class="text-center mt-4 text-2xl text-primary font-medium">Book a Car Inspection</div>
+                <div class=" mt-3 text-center text-primary font-light text-[1.1rem]">
+                  Far far away, behind the word mountains, far from the countries Vokalia.
+                </div>
+              </div>
+              <div class="lg:flex hidden border-dashed border-b justify-center items-center mt-20  border-primary md:col-span-2 col-span-10"></div>
+              <div class=" lg:col-span-2 col-span-10">
+                <div class="bg-white flex justify-center relative items-center  py-12 rounded-md"><i class="fa-solid fa-gears text-6xl "></i>
+                  <div class="absolute top-0 right-0 bg-red-600 p-2 text-white">03</div>
+                </div>
+                <div class="text-center mt-4 text-2xl text-primary font-medium">Get Your Car Fixed</div>
+                <div class=" mt-3 text-center text-primary font-light text-[1.1rem]">
+                  Far far away, behind the word mountains, far from the countries Vokalia.
+                </div>
+              </div>
+            </div>
+            <div class="text-white flex md:flex-row flex-col w-full  mx-auto items-center gap-3 justify-center text-sm mt-16"> 
+              <div class="flex justify-center"><button class="bg-red-600 py-4 w-[150px] rounded-md">LEARN MORE</button></div>
+              <div class="flex justify-center"><button class="bg-primary w-[200px] py-4 rounded-md">BOOK AN APPOINTMENT</button></div>
+            </div>
+          </div>
+         </section>
+         <!--========================= booking section================ -->
+
+
+
+          <!-- =====================statictics section================== -->
+           <div class="p-10 bg-primary opacity-75 text-white">
+            <div>
+              <p class="text-white text-3xl font-medium text-center">Technical Statistics</p>
+            </div>
+            <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 py-10 lg:px-32 px-2 gap-4">
+              <div class=" flex flex-col justify-center items-center p-8 " data-aos="fade-up-right"data-aos-duration="3000">
+                <div class="text-center">
+                  <p class="text-5xl font-bold my-6" id="count1" >0</p>
+                  <p class="text-2xl font-medium">Years of Experience</p>
+                </div>
+              </div>
+              <div class="  flex flex-col justify-center items-center p-8"data-aos="fade-up-right"data-aos-duration="3210">
+                   <p class="text-5xl font-bold  my-6" id="count2">1000</p>
+                  <p class="text-2xl font-medium">Satisfied customer</p>
+              </div>
+              <div class=" flex flex-col justify-center items-center p-8"data-aos="fade-up-right"data-aos-duration="3330">
+                   <p class="text-5xl font-bold my-6" id="count3">1</p>
+                  <p class="text-2xl font-medium">Technician</p>
+              </div>
+              <div class="  flex flex-col justify-center items-center p-8"data-aos="fade-up-right"data-aos-duration="3450">
+                   <p class="text-5xl font-bold my-6" id="count4">1</p>
+                  <p class="text-2xl font-medium">Gift award</p>
+              </div>
+             </div>
+           </div>
+         
+          <!-- =====================statictics section================== -->
+
+          <!-- ===================our mechanic section=================== -->
+           <section class="">
+            <div class="bg-[#F0F0F0] md:px-6 px-0 py-10">
+
+           
+            <div class="bg-[#F0F0F0]">
+              <div>
+                <p class="text-red-600 font-bold text-center">Our Mechanics</p>
+              </div>
+              <div>
+                <p class="text-4xl font-semibold text-center mt-4">Expert Mechanics</p>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-28 bg-[#F0F0F0]">
+              <div class="md:mb-14 lg:mb-2 zoom ease-in duration-200">
+                <div class="workers ease-in duration-300 rounded-md md:col-span-3 col-span-12 flex flex-col items-center relative bg-white md:mb-0 mb-24">
+                  <div class="absolute z-10 -top-20 h-[200px] border-8 w-[200px] rounded-full "><img src="img/face2.jpg" alt="" class="w-[100%] h-[100%] rounded-full object-cover bg-center image-zoom"></div>
+                  <div class="bg-white rounded-md pb-12 pt-44 relative workers">
+                    <div class="mt-4">
+                      <p class="text-center font-medium text-[1.3rem] jude">Jude Orifa </p>
+                    </div>
+                    <div class="mt-2">
+                      <p class="text-center text-red-600 font-bold text-[1.2rem] jude">Engine Mechanic</p>
+                    </div>
+                    <div class="flex gap-2 mt-4">
+                      <p class="text-white bg-red-600 w-10 h-10 rounded-full text-[1.2rem] flex justify-center items-center"><i class="fa-brands fa-twitter"></i></p>
+                      <p class="text-white bg-red-600 w-10 h-10 rounded-full text-[1.2rem] flex justify-center items-center"><i class="fa-brands fa-facebook"></i></p>
+                      <p class="text-white bg-red-600 w-10 h-10 rounded-full text-[1.2rem] flex justify-center items-center"><i class="fa-brands fa-google"></i></p>
+                      <p class="text-white bg-red-600 w-10 h-10 rounded-full text-[1.2rem] flex justify-center items-center"><i class="fa-brands fa-instagram"></i></p>
+                    </div>
+                    <div class="mt-4">
+                      <p class="text-center text-[1.1rem] jude">I am an ambitious <br>workaholic, but apart from <br>that, pretty simple person.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="md:mb-14 lg:mb-2 zoom">
+                 <div class="workers ease-in duration-300 rounded-md md:col-span-3 col-span-12 flex flex-col items-center relative bg-white md:mb-0 mb-24 ">
+                    <div class="absolute z-10 -top-20 h-[200px] border-8 w-[200px] rounded-full"><img src="img/face3.avif" alt="" class=" object-cover h-[100%] w-[100%] rounded-full image-zoom" ></div>
+                    <div class="bg-white rounded-md pb-12 pt-44 relative workers">
+                      <div class="mt-4">
+                        <p class="text-center font-medium text-[1.3rem] jude">Jude Orifa </p>
+                      </div>
+                      <div class="mt-2">
+                        <p class="text-center text-red-600 font-bold text-[1.2rem] jude">Engine Mechanic</p>
+                      </div>
+                      <div class="flex gap-2 mt-4">
+                        <p class="text-white bg-red-600 w-10 h-10 rounded-full text-[1.2rem] flex justify-center items-center"><i class="fa-brands fa-twitter"></i></p>
+                        <p class="text-white bg-red-600 w-10 h-10 rounded-full text-[1.2rem] flex justify-center items-center"><i class="fa-brands fa-facebook"></i></p>
+                        <p class="text-white bg-red-600 w-10 h-10 rounded-full text-[1.2rem] flex justify-center items-center"><i class="fa-brands fa-google"></i></p>
+                        <p class="text-white bg-red-600 w-10 h-10 rounded-full text-[1.2rem] flex justify-center items-center"><i class="fa-brands fa-instagram"></i></p>
+                      </div>
+                      <div class="mt-4">
+                        <p class="text-center text-[1.1rem] jude">I am an ambitious <br>workaholic, but apart from <br>that, pretty simple person.</p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="zoom">
+                 <div class="workers ease-in duration-300 rounded-md md:col-span-3 col-span-12 flex flex-col items-center relative bg-white md:mb-0 mb-24">
+                    <div class="absolute z-10 -top-20 h-[200px] border-8 w-[200px] rounded-full"><img src="img/face4.jpg" alt="" class="w-[100%] h-[100%] object-cover rounded-full items-center image-zoom"></div>
+                    <div class="bg-white rounded-md pb-12 pt-44 relative workers">
+                      <div class="mt-4">
+                        <p class="text-center font-medium text-[1.3rem] jude">Jude Orifa </p>
+                      </div>
+                      <div class="mt-2">
+                        <p class="text-center text-red-600 font-bold text-[1.2rem] jude">Engine Mechanic</p>
+                      </div>
+                      <div class="flex gap-2 mt-4">
+                        <p class="text-white bg-red-600 w-10 h-10 rounded-full text-[1.2rem] flex justify-center items-center"><i class="fa-brands fa-twitter"></i></p>
+                        <p class="text-white bg-red-600 w-10 h-10 rounded-full text-[1.2rem] flex justify-center items-center"><i class="fa-brands fa-facebook"></i></p>
+                        <p class="text-white bg-red-600 w-10 h-10 rounded-full text-[1.2rem] flex justify-center items-center"><i class="fa-brands fa-google"></i></p>
+                        <p class="text-white bg-red-600 w-10 h-10 rounded-full text-[1.2rem] flex justify-center items-center"><i class="fa-brands fa-instagram"></i></p>
+                      </div>
+                      <div class="mt-4">
+                        <p class="text-center text-[1.1rem] jude">I am an ambitious <br>workaholic, but apart from <br>that, pretty simple person.</p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="zoom">
+                 <div class="workers ease-in duration-300 rounded-md md:col-span-3 col-span-12 flex flex-col items-center relative bg-white md:mb-0 mb-24">
+                    <div class="absolute z-10 -top-20"><img src="img/landing-page-2.jpg" alt="" class="h-[200px] border-8 w-[200px] rounded-full image-zoom"></div>
+                    <div class="bg-white rounded-md pb-12 pt-44 relative workers">
+                      <div class="mt-4">
+                        <p class="text-center font-medium text-[1.3rem] jude">Jude Orifa </p>
+                      </div>
+                      <div class="mt-2">
+                        <p class="text-center text-red-600 font-bold text-[1.2rem] jude">Engine Mechanic</p>
+                      </div>
+                      <div class="flex gap-2 mt-4">
+                        <p class="text-white bg-red-600 w-10 h-10 rounded-full text-[1.2rem] flex justify-center items-center"><i class="fa-brands fa-twitter"></i></p>
+                        <p class="text-white bg-red-600 w-10 h-10 rounded-full text-[1.2rem] flex justify-center items-center"><i class="fa-brands fa-facebook"></i></p>
+                        <p class="text-white bg-red-600 w-10 h-10 rounded-full text-[1.2rem] flex justify-center items-center"><i class="fa-brands fa-google"></i></p>
+                        <p class="text-white bg-red-600 w-10 h-10 rounded-full text-[1.2rem] flex justify-center items-center"><i class="fa-brands fa-instagram"></i></p>
+                      </div>
+                      <div class="mt-4">
+                        <p class="text-center text-[1.1rem] jude">I am an ambitious <br>workaholic, but apart from <br>that, pretty simple person.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+           </section>
+        
+       
+          
+          <!-- ===================our mechanic section=================== -->
+
+
+          <!-- ======================testimonial section====================== -->
+      <section class="">
+
+              <div class="w-full bg-[#F0F0F0] py-10">
+                <div class="my-6">
+                  <div>
+                    <p class="text-center font-bold text-red-600">Testimonial</p>
+                  </div>
+                  <div>
+                    <p class="text-[2.2rem] text-center mt-2 font-light">Happy Customer</p>
+                  </div>
+                </div>
+
+                <div class="grid lg:grid-cols-3 grid-cols-1 w-full p-6 gap-6">
+                  <div class="shadow-lg shadow-red-100">
+                    <div class=" rounded-md">
+                      <div class="md:col-span-4 col-span-12 flex justify-center">
+                        <div class="bg-white w-full py-10 relative flex flex-col justify-center">
+                          <p class="leading-relaxed text-[1.2rem] text-gray-400 text-center">"Far far away, behind the word <br>mountains, far from the countries <br> Vokalia and Consonantia, there live <br>the blind texts."</p>
+                         
+                          <div class="flex items-center gap-3 mt-4 flex-col justify-center text-center">
+                            <div class="h-[100px] w-[100px] rounded-full border-8 border-red-200"><img src="img/customer3.jpg" alt="" class="object-cover w-[100%] bg-center bg-cover h-[100%] rounded-full"></div>
+                            <p class="text-red-600 text-[1.2rem]">★★★★★</p>
+    
+                            <div>
+                              <p class="text-black text-[1.2rem] font-semibold">Innocent Saviour</p>
+                              <p class="text-red-600 font-semibold text-[1.2rem]">customer1</p>
+                            </div>
+                          </div>
+                        </div>
+                      
+                      </div>
+                    </div>
+                  </div>
+                  <div class="shadow-lg shadow-red-100">
+                    <div class=" rounded-md">
+                      <div class="md:col-span-4 col-span-12 flex justify-center">
+                        <div class="bg-white w-full py-10 relative flex flex-col justify-center">
+                          <p class="leading-relaxed text-[1.2rem] text-gray-400 text-center">"Far far away, behind the word <br>mountains, far from the countries <br> Vokalia and Consonantia, there live <br>the blind texts."</p>
+                         
+                          <div class="flex items-center gap-3 mt-4 flex-col justify-center text-center">
+                            <div class="h-[100px] w-[100px] rounded-full border-8 border-red-200"><img src="img/customer2.jpg" alt="" class=" w-[100%] object-cover h-[100%] rounded-full"></div>
+                            <p class="text-red-600 text-[1.2rem]">★★★★★</p>
+    
+                            <div>
+                              <p class="text-black text-[1.2rem] font-semibold">Micheal Abioye</p>
+                              <p class="text-red-600 font-semibold text-[1.2rem]">customer2</p>
+                            </div>
+                          </div>
+                        </div>
+                      
+                      </div>
+                    </div>
+                  </div>
+                  <div class="shadow-lg shadow-red-100">
+                    <div class=" rounded-md ">
+                      <div class="md:col-span-4 col-span-12 flex justify-center">
+                        <div class="bg-white w-full py-10 relative flex flex-col justify-center">
+                          <p class="leading-relaxed text-[1.2rem] text-gray-400 text-center">"Far far away, behind the word <br>mountains, far from the countries <br> Vokalia and Consonantia, there live <br>the blind texts."</p>
+                         
+                          <div class="flex items-center gap-3 mt-4 flex-col justify-center text-center">
+                            <div class="h-[100px] w-[100px] rounded-full border-8 border-red-200"><img src="img/customer4.jpg" alt="" class=" object-cover w-[100%] h-[100%] rounded-full"></div>
+                            <p class="text-red-600 text-[1.2rem]">★★★★★</p>
+    
+                            <div>
+                              <p class="text-black text-[1.2rem] font-semibold">Godmin Emeka</p>
+                              <p class="text-red-600 font-semibold text-[1.2rem]">customer2</p>
+                            </div>
+                          </div>
+                        </div>
+                      
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </section>
+
+          
+          <!-- ======================testimonial section====================== -->
+
+
+
+
+
+
+          <section class=" pb-28 pt-16">
+            <div class="bg-[#F8F8F8] md:px-14 px-4">
+
+
+            <div class="p-10 bg-[#F8F8F8]">
+              <div>
+                <p class="text-red-600 font-bold text-center mt-8">OUR BLOG</p>
+              </div>
+              <div>
+
+                 <p class="text-center font-semibold text-5xl mt-2">Recent from our Blog</p>
+              </div>
+            </div>
+            <div class="grid grid-cols-12 justify-center mt-10 gap-8 pb-14">
+              <div class="lg:col-span-4 col-span-12 bg-blue-600">
+                <div><img src="img/blogs1.jpg" alt="" class="w-full"></div>
+                <div class="bg-white p-8">
+                  <div class="flex gap-4 mt-2 justify-center">
+                    <p class="flex"><span class="text-red-600 font-bold"><i class="fa-solid fa-user"></i></span>ADMIN</p>
+                    <p class="flex"><span><i class="fa-solid fa-calendar-days text-red-600 font-bold "></i></span> JAN 27 2021</p>
+                    <p class="flex text-red-600 font-bold"><span class="text-red-600 font-bold "><i class="fa-solid fa-comment"></i></span>3 COMMENTS</p>
+                  </div>
+                  <div class="mt-5">
+                    <p class="text-black text-2xl font-medium">Tips on How to Maintain Your <br>Brand New Car</p>
+                  </div>
+                  <div class=" text-gray-400 text-[1.2rem] mt-3">
+                    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="lg:col-span-4 col-span-12 bg-red-600">
+              <div><img src="img/blog-3.jpg" alt=""></div>
+              <div class="bg-white p-8">
+                <div class="flex gap-4 mt-2 justify-center">
+                  <p class="flex"><span class="text-red-600 font-bold"><i class="fa-solid fa-user"></i></span>ADMIN</p>
+                  <p class="flex"><span><i class="fa-solid fa-calendar-days text-red-600 font-bold "></i></span> JAN 27 2021</p>
+                  <p class="flex text-red-600 font-bold"><span class="text-red-600 font-bold "><i class="fa-solid fa-comment"></i></span>3 COMMENTS</p>
+                </div>
+                <div class="mt-5">
+                  <p class="text-black text-2xl font-medium">Tips on How to Maintain Your <br>Brand New Car</p>
+                </div>
+                <div class=" text-gray-400 text-[1.2rem] mt-3">
+                  <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                </div>
+              </div>
+              </div>
+              <div class="lg:col-span-4 col-span-12 ">
+                <div><img src="img/blog-3.jpg" width="100%" alt=""></div>
+                <div class="bg-white p-6">
+                  <div class="flex gap-4 mt-2 justify-center">
+                    <p class="flex"><span class="text-red-600 font-bold"><i class="fa-solid fa-user"></i></span>ADMIN</p>
+                    <p class="flex"><span><i class="fa-solid fa-calendar-days text-red-600 font-bold "></i></span> JAN 27 2021</p>
+                    <p class="flex text-red-600 font-bold"><span class="text-red-600 font-bold "><i class="fa-solid fa-comment"></i></span>3 COMMENTS</p>
+                  </div>
+                  <div class="mt-5">
+                    <p class="text-black text-2xl font-medium">Tips on How to Maintain Your <br>Brand New Car</p>
+                  </div>
+                  <div class=" text-gray-400 text-[1.2rem] mt-5">
+                    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            </div>
+           </section>
+          <!-- ==========================blog section========================= -->
+
+
+
+          <!-- =====================foooter section============================= -->
+
+
+
+
+
+
+
+
+
+          <footer class="bg-primary text-white">
+            <div class="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Company Info -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">About Us</h3>
+                        <p class="text-gray-400">Your trusted car fix company offering a wide range of services to keep your vehicle in top condition.</p>
+                    </div>
+                    <!-- Services -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Services</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-oil-can footer-icon mr-2"></i> Lube Service
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-tools footer-icon mr-2"></i> General Maintenance
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-car-battery footer-icon mr-2"></i> Battery Replacement
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-car-crash footer-icon mr-2"></i> Collision Repair
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-car-side footer-icon mr-2"></i> Tire Change
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Contact Info -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                        <p class="text-gray-400">No1 Idowu Crescent Adalemo Bus Stop Sango Ota Ogun state</p>
+                        <p class="text-gray-400">Email: judeorifa28@gmail.com</p>
+                        <p class="text-gray-400">Phone: <a href="tel:+2348068078495">(123) 456-7890</a></p>
+                        <div class="mt-4 flex space-x-3">
+                            <a href="https://www.facebook.com/profile.php?id=100089710500872&mibextid=LQQJ4d" class="footer-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="http://www.twitter.com" class="footer-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="footer-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="https://wa.me/+2348068078495" class="footer-icon"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-white mt-8 pt-4 text-center text-gray-400">
+                    © 2024 Jude Auto Hub Company. All rights reserved.
+                </div>
+            </div>
+        </footer>
+
+
+        <!-- <div class="circle rotating">
+          <div class="tool1">Tool 1</div>
+          <div class="tool2">Tool 2</div>
+          <div class="tool3">Tool 3</div>
+          <div class="tool4">Tool 4</div>
+      </div> -->
+    
+          <!-- =====================foooter section============================= -->
+              
+
+
+          
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  <script>
+    AOS.init();
+</script>
+
+<script src="main.js"></script>
+</body>
+</html>

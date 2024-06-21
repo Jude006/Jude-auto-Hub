@@ -1,0 +1,405 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- remix icon -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/> 
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body class="font-Lato">
+    <style>
+        li:hover .group{
+           display: block;
+         
+       }
+       .group ul li a:hover{
+           color: #6B1019;
+           transition: ease-in 0.4s;
+       }
+       .box:hover .sup{
+        display: flex;
+        transform: translateX(-40px);
+        transform: translateY(-30px);
+        transition:  ease-in 6.4s;
+       }
+       html{
+        scroll-behavior: smooth;
+       }
+       .modal {
+          
+            position: fixed;
+            z-index: 40;
+            left: 0;
+            top: 20px;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 90%;
+            max-width: 600px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-height: 80vh; 
+            overflow-y: scroll;
+        }
+        .modal-content::-webkit-scrollbar {
+        display: none;
+    }
+
+    </style>
+     <!-- ====================nav bar side========================== -->
+ 
+
+  <nav class="bg-primary  text-white border-gray-200  font-Roboto fixed w-[100%] z-50 top-0">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="img/car-repair.svg" class="h-8" alt="Jude auto hub logo">
+        <span class="self-center text-[1.2rem] font-semibold whitespace-nowrap dark:text-white">Jude Auto Hub</span>
+    </a>
+    <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse  ">
+        <button type="button" class="text-white  border ease-in duration-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-3 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 xm:hidden"><a href="appointment.html">Appointment</a></button>
+        <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <div>
+            <div id="menu-icon"><i class="ri-menu-3-line text-2xl"></i></div>
+          </div>
+      </button>
+    </div>
+    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="menu">
+      <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
+        <li>
+          <a href="index.html" class="block py-2 px-3   rounded md:bg-transparent md:p-0 " aria-current="page">Home</a>
+        </li>
+        <li>
+          <a href="about.html" class="block py-2 px-3 rounded md:hover:bg-transparent  md:p-0   ">About</a>
+        </li>
+        <li class="relative ease-in duration-500">
+          <a href="service.html" class="block py-2 px-3 rounded  md:hover:bg-transparentt md:p-0  ">Services</a>
+          <div class="bg-black absolute rounded-sm hidden group ease-in duration-300">
+            <ul class="px-6 py-3 flex flex-col text-sm gap-2 ">
+                <li class="p-2 rounded-md hover:bg-gray-800 ease-in duration-300 border-b border-white"><a href="ac.html">A/C service</a></li>
+                <li class="p-2 rounded-md hover:bg-gray-800 ease-in duration-300 border-b border-white"><a href="brake.html">Brake Repair</a></li>
+                <li class="p-2 rounded-md hover:bg-gray-800 ease-in duration-300 border-b border-white"><a href="engine.html">Engine Repair</a></li>
+                <li class="p-2 rounded-md hover:bg-gray-800 ease-in duration-300 border-b border-white"><a href="oil.html">Oil Change</a></li>
+                <li class="p-2 rounded-md hover:bg-gray-800 ease-in duration-300 border-b border-white"><a href="tire.html">Tire Change</a></li>
+                <li class="p-2 rounded-md hover:bg-gray-800 ease-in duration-300 border-b border-white"><a href="performance.html">Performance</a></li>
+            </ul>
+ 
+          </div>
+        </li>
+        <li>
+          <a href="blog.html" class="block py-2 px-3 rounded   md:p-0 ">Blog</a>
+        </li>
+        <li>
+          <a href="shop.html" class="block py-2 px-3 rounded   md:p-0   ">Shop</a>
+        </li>
+        <li>
+          <a href="contact.html" class="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent  md:p-0   ">Contact</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+      </nav>
+  
+  <!-- ====================nav bar side========================== -->
+
+
+            <!-- ==============================landing-page============== -->
+            <div style=" background-image: url(img/appoint.jpg);background-position: center;background-size: cover;background-repeat: no-repeat; object-fit: cover;white-space: wrap;width: 100%;" class="bg-center bg-cover bg-fixed">
+              <div class="p-4 flex flex-col justify-center items-center">
+                  <div class="mt-40 font-Roboto">
+                      <p class="text-white text-4xl font-semibold text-center">At Jude Auto Hub We Got You Covered For Your Auto Repair</p>
+                  </div>
+                  <div class="mt-4 font-light text-center">
+                      <p class="text-[1.1rem] text-white">We're excited to get your vehicle back in top shape! Booking an appointment with us is quick and easy. Simply fill out <br> the form below with your contact information nd preferred appointment time, and we'll  <br>confirm your slot as soon as possible.
+
+
+      
+                      </p>
+                  </div>
+                  <div class="mt-4 p-6">
+                    <button class="text-black py-3 px-8 rounded-md bg-blue-100 "><a href="#book" id="book">Book</a></button>
+                  </div> 
+              </div>
+             </div>
+            <!-- ==============================landing-page============== -->
+      
+    <section class="mt-10 rounded-lg shadow-md shadow-gray-500">
+        <div class="py-10 ">
+            <p class="text-black font-bold text-center w-full text-2xl underline"><a href="#back" id=" book">Book Appointment Now!</a></p>
+        </div>
+
+        <div class="w-full bg-red-600 px-10 py-6 text-white text-2xl font-bold text-center rounded-t-md">JUNE 2024</div>
+      <div class="grid grid-cols-12 rounded-lg shadow-md shadow-gray-500">
+        <p class=" lg:flex hidden justify-center items-center w-full lg:col-span-2 md:col-span-4 col-span-12 bg-black px-6 py-3 text-white text-center">mon</p>
+        <p class=" lg:flex hidden justify-center items-center w-full lg:col-span-2 md:col-span-4 col-span-12 bg-black px-6 py-3 text-white text-center">tue</p>
+        <p class=" lg:flex hidden justify-center items-center w-full lg:col-span-2 md:col-span-4 col-span-12 bg-black px-6 py-3 text-white text-center">wed</p>
+        <p class=" lg:flex hidden justify-center items-center w-full lg:col-span-2 md:col-span-4 col-span-12 bg-black px-6 py-3 text-white text-center">thur</p>
+        <p class=" lg:flex hidden justify-center items-center w-full lg:col-span-2 md:col-span-4 col-span-12 bg-black px-6 py-3 text-white text-center">fri</p>
+        <p class=" lg:flex hidden justify-center items-center w-full lg:col-span-2 md:col-span-4 col-span-12 bg-black px-6 py-3 text-white text-center">sat</p>
+        <div class="border-2 border-white py-16 bg-[#F5F5F5] cursor-not-allowed flex justify-center items-center text-2xl font-bold  lg:col-span-2 md:col-span-4 col-span-12">27</div>
+        <div class="border-2 border-white py-16 bg-[#F5F5F5] cursor-not-allowed flex justify-center items-center text-2xl font-bold  lg:col-span-2 md:col-span-4 col-span-12">28</div>
+        <div class="border-2 border-white py-16 bg-[#F5F5F5] cursor-not-allowed flex justify-center items-center text-2xl font-bold  lg:col-span-2 md:col-span-4 col-span-12">29</div>
+        <div class="border-2 border-white py-16 bg-[#F5F5F5] cursor-not-allowed flex justify-center items-center text-2xl font-bold  lg:col-span-2 md:col-span-4 col-span-12">30</div>
+        <div class="border-2 border-white py-16 bg-[#F5F5F5] cursor-not-allowed flex justify-center items-center text-2xl font-bold  lg:col-span-2 md:col-span-4 col-span-12">31</div>
+        <div class="border-2 border-white py-16 bg-[#F5F5F5] cursor-not-allowed flex justify-center items-center text-2xl font-bold  lg:col-span-2 md:col-span-4 col-span-12">1</div>
+        <div class="border-2 border-white py-16 bg-[#F5F5F5] cursor-not-allowed flex justify-center items-center text-2xl font-bold  lg:col-span-2 md:col-span-4 col-span-12">2</div>
+        <div class="border-2 border-white py-16 bg-[#F5F5F5] cursor-not-allowed flex justify-center items-center text-2xl font-bold  lg:col-span-2 md:col-span-4 col-span-12">3</div>
+        <div class="border-2 border-white py-16 bg-[#F5F5F5] cursor-not-allowed flex justify-center items-center text-2xl font-bold  lg:col-span-2 md:col-span-4 col-span-12">4</div>
+        <div class="border-2 border-white py-16 bg-[#F5F5F5] cursor-not-allowed flex justify-center items-center text-2xl font-bold  lg:col-span-2 md:col-span-4 col-span-12">5</div>
+        <div class="border-2 border-white py-16 bg-[#F5F5F5] cursor-not-allowed flex justify-center items-center text-2xl font-bold  lg:col-span-2 md:col-span-4 col-span-12">6</div>
+        <div class="border-2 border-white py-16 bg-[#F5F5F5] cursor-not-allowed flex justify-center items-center text-2xl font-bold  lg:col-span-2 md:col-span-4 col-span-12">7</div>
+        <div class="border-2 border-white py-16 bg-[#F5F5F5] cursor-not-allowed flex justify-center items-center text-2xl font-bold  lg:col-span-2 md:col-span-4 col-span-12">8</div>
+        <div class="border-2 border-white py-16 bg-[#F5F5F5] cursor-not-allowed flex justify-center items-center text-2xl font-bold  lg:col-span-2 md:col-span-4 col-span-12">9</div>
+        <div class="border-2 border-white py-16 bg-[#F5F5F5] cursor-not-allowed flex justify-center items-center text-2xl font-bold  lg:col-span-2 md:col-span-4 col-span-12">10</div>
+        <div class="border-2 border-white py-16 bg-[#F5F5F5] cursor-not-allowed flex justify-center items-center text-2xl font-bold  lg:col-span-2 md:col-span-4 col-span-12">11</div>
+        <div class="border-2 border-white py-16 bg-[#F5F5F5] cursor-not-allowed flex justify-center items-center text-2xl font-bold  lg:col-span-2 md:col-span-4 col-span-12">12</div>
+        <div class="border-2 border-white py-16 bg-[#F5F5F5] cursor-not-allowed flex justify-center items-center text-2xl font-bold  lg:col-span-2 md:col-span-4 col-span-12">13</div>
+        <div class="border py-16  flex justify-center items-center text-2xl font-bold  lg:col-span-2 md:col-span-4 col-span-12 bg-[#f5f5f5] cursor-not-allowed">14</div>
+        <div class="border py-16 flex justify-center items-center text-2xl font-bold  lg:col-span-2 md:col-span-4 col-span-12  bg-[#f5f5f5] cursor-not-allowed ">15</div>
+        <div class="border py-16 flex justify-center items-center text-2xl font-bold  lg:col-span-2 md:col-span-4 col-span-12  bg-[#f5f5f5] cursor-not-allowed">16</div>
+        <div class="border py-16 flex justify-center items-center text-2xl font-bold  lg:col-span-2 md:col-span-4 col-span-12  bg-[#f5f5f5] cursor-not-allowed">17</div>
+        <div class="border py-16  flex justify-center   items-center text-2xl font-bold  lg:col-span-2 md:col-span-4 col-span-12 bg-[#f5f5f5] cursor-not-allowed">18</div>
+        <div class="border py-16  bg-[#F5F5F5] flex justify-center items-center text-2xl font-bold  lg:col-span-2 md:col-span-4 col-span-12 cursor-not-allowed">19</div>
+        <div class="border py-16 flex justify-center items-center text-2xl font-bold  lg:col-span-2 md:col-span-4 col-span-12 bg-[#f5f5f5] cursor-not-allowed">20</div>
+        <div class="all border py-16 flex justify-center items-center text-2xl font-bold  lg:col-span-2 md:col-span-4 col-span-12 bg-[#f5f5f5] cursor-not-allowed" id="#book">21</div>
+        <div class="box border py-16 relative flex justify-center items-center text-2xl font-bold  lg:col-span-2 md:col-span-4 col-span-12 cursor-pointer " id="boxone">22 <sup class="sup font-bold text-sm mt-10 text-green-600 hidden ease-in duration-700 absolute">Available</sup></div>
+        <div class="box border py-16 relative flex justify-center items-center text-2xl font-bold  lg:col-span-2 md:col-span-4 col-span-12 cursor-pointer ">23 <sup class="sup font-bold text-sm mt-10 text-green-600 hidden ease-in duration-700 absolute">Available</sup></div>
+        <div class="box border py-16 relative flex justify-center items-center text-2xl font-bold  lg:col-span-2 md:col-span-4 col-span-12 cursor-pointer ">24 <sup class="sup font-bold text-sm mt-10 text-green-600 hidden ease-in duration-700 absolute">Available</sup></div>
+        <div class="border py-16 flex justify-center items-center text-2xl font-bold  lg:col-span-2 md:col-span-4 col-span-12 bg-[#f5f5f5] cursor-not-allowed">25</div>
+        <div class="ease-in duration-700 border py-16 flex justify-center items-center text-2xl font-bold  lg:col-span-2 md:col-span-4 col-span-12 bg-[#f5f5f5] cursor-not-allowed">26</div>
+        <div class="ease-in duration-700 box border py-16 flex justify-center items-center text-2xl font-bold  lg:col-span-2 md:col-span-4 col-span-12 cursor-pointer relative">27 <sup class="sup font-bold text-sm mt-10 text-green-600 hidden ease-in duration-700 absolute">Available</sup></div>
+        <div class=" border py-16 flex justify-center items-center text-2xl font-bold  lg:col-span-2 md:col-span-4 col-span-12 cursor-not-allowed relative bg-[#f5f5f5]">28 </div>
+        <div class="ease-in duration-700 box border py-16 flex justify-center items-center text-2xl font-bold  lg:col-span-2 md:col-span-4 col-span-12 cursor-pointer relative">29 <sup class="sup font-bold text-sm mt-10 text-green-600 hidden ease-in duration-700 absolute">Available</sup></div>
+        <div class="ease-in duration-700 box border py-16 flex justify-center items-center text-2xl font-bold  lg:col-span-2 md:col-span-4 col-span-12 cursor-pointer relative">30 <sup class="sup font-bold text-sm mt-10 text-green-600 hidden ease-in duration-700 absolute">Available</sup></div>
+      </div>
+
+        <div class="hidden bg-[#f5f5f5] p-10 rounded-b-md" id="one">
+           <div class="bg-white  py-4 px-10 ">
+            <div class="flex justify-center items-center w-full">
+                <p class="text-center text-[1.3rem] font-bold p-4 border-b flex justify-center items-center w-full">Available Appointments on Jun 22, 2024</p>
+            </div>
+            <div class="my-2  text-[1.1rem] p-4 border-b flex justify-between">
+            <div class="">
+              <p class=""><i class="fa light fa-clock font-light mr-3"></i>8:00am</p>
+              <p>4 spaces available</p>
+            </div>
+            <div>
+              <button class="py-3 px-8 rounded-sm bg-red-600 text-white font-bol" id="appointmentButton">Book Appointment</button>
+            </div>
+          </div>
+            <div class="my-2  text-[1.1rem] p-4 border-b flex justify-between">
+            <div class="">
+              <p class=""><i class="fa light fa-clock font-light mr-3"></i>9:00am</p>
+              <p>4 spaces available</p>
+            </div>
+            <div>
+              <button class="py-3 px-8 rounded-sm bg-red-600 text-white font-bol">Book Appointment</button>
+            </div>
+          </div>
+            <div class="my-2  text-[1.1rem] p-4 border-b flex justify-between">
+            <div class="">
+              <p class=""><i class="fa light fa-clock font-light mr-3"></i>10:00am</p>
+              <p>4 spaces available</p>
+            </div>
+            <div>
+              <button class="py-3 px-8 rounded-sm bg-red-600 text-white font-bol">Book Appointment</button>
+            </div>
+          </div>
+            <div class="my-2  text-[1.1rem] p-4 border-b flex justify-between">
+            <div class="">
+              <p class=""><i class="fa light fa-clock font-light mr-3"></i>11:00am</p>
+              <p>4 spaces available</p>
+            </div>
+            <div>
+              <button class="py-3 px-8 rounded-sm bg-red-600 text-white font-bol">Book Appointment</button>
+            </div>
+          </div>
+            <div class="my-2  text-[1.1rem] p-4 border-b flex justify-between">
+            <div class="">
+              <p class=""><i class="fa light fa-clock font-light mr-3"></i>12:00pm</p>
+              <p>4 spaces available</p>
+            </div>
+            <div>
+              <button class="py-3 px-8 rounded-sm bg-red-600 text-white font-bol">Book Appointment</button>
+            </div>
+          </div>
+            <div class="my-2  text-[1.1rem] p-4 border-b flex justify-between">
+            <div class="">
+              <p class=""><i class="fa light fa-clock font-light mr-3"></i>1:00pm</p>
+              <p>4 spaces available</p>
+            </div>
+            <div>
+              <button class="py-3 px-8 rounded-sm bg-red-600 text-white font-bol">Book Appointment</button>
+            </div>
+          </div>
+            <div class="my-2  text-[1.1rem] p-4 border-b flex justify-between">
+            <div class="">
+              <p class=""><i class="fa light fa-clock font-light mr-3"></i>2:00pm</p>
+              <p>4 spaces available</p>
+            </div>
+            <div>
+              <button class="py-3 px-8 rounded-sm bg-red-600 text-white font-bol">Book Appointment</button>
+            </div>
+          </div>
+            <div class="my-2  text-[1.1rem] p-4 border-b flex justify-between">
+            <div class="">
+              <p class=""><i class="fa light fa-clock font-light mr-3"></i>3:00pm</p>
+              <p>4 spaces available</p>
+            </div>
+            <div>
+              <button class="py-3 px-8 rounded-sm bg-red-600 text-white font-bol">Book Appointment</button>
+            </div>
+          </div>
+            <div class="my-2  text-[1.1rem] p-4 border-b flex justify-between">
+            <div class="">
+              <p class=""><i class="fa light fa-clock font-light mr-3"></i>4:00pm</p>
+              <p>4 spaces available</p>
+            </div>
+            <div>
+              <button class="py-3 px-8 rounded-sm bg-red-600 text-white font-bol">Book Appointment</button>
+            </div>
+          </div>
+            <div class="my-2  text-[1.1rem] p-4 border-b flex justify-between">
+            <div class="">
+              <p class=""><i class="fa light fa-clock font-light mr-3"></i>5:00pm</p>
+              <p>4 spaces available</p>
+            </div>
+            <div>
+              <button class="py-3 px-8 rounded-sm bg-red-600 text-white font-bol">Book Appointment</button>
+            </div>
+          </div>
+            <div class="my-2  text-[1.1rem] p-4 border-b flex justify-between">
+            <div class="">
+              <p class=""><i class="fa light fa-clock font-light mr-3"></i>6:00pm</p>
+              <p>4 spaces available</p>
+            </div>
+            <div>
+              <button class="py-3 px-8 rounded-sm bg-red-600 text-white font-bol">Book Appointment</button>
+            </div>
+          </div>
+            <div class="my-2  text-[1.1rem] p-4 border-b flex justify-between">
+            <div class="">
+              <p class=""><i class="fa light fa-clock font-light mr-3"></i>7:00pm</p>
+              <p>1 spaces available</p>
+            </div>
+            <div>
+              <button class="py-3 px-8 rounded-sm bg-red-600 text-white font-bol">Book Appointment</button>
+            </div>
+          </div>
+
+           </div>
+
+
+           <div id="formModal" class="modal hidden">
+            <div class="modal-content bg-red-600   shadow-lg shadow-gray-600 p-6">
+                <span class="text-black cursor-pointer float-right text-3xl" id="close">&times;</span>
+              
+
+                <form class="leading-relaxed text-[1.1rem]" id="appointmentForm"   action="https://formspree.io/f/xoqggool" method="post">
+                  <!-- <div>
+                    <p class="text-gray-500 text-sm py-2">Please confirm that you would like to request the following appointment:</p>
+                  </div>
+                  <div>
+                    <p class="py-2 px-16 text-black bg-white m-4 text-[1.3rem] font-bold text-center  rounded-sm"></i> Jun 22, 2024 at 8:00 am</p>
+                  </div>
+                  <div>
+                    <p>Your Imformation: <span class="text-red-600 font-bold text-[1.3rem]">*</span></p>
+                  </div>
+                  <div>
+                    <p class="text-gray-500 my-2">Please enter your first name, last name and email address:</p>
+                  </div> -->
+                  <div class="flex md:flex-row flex-col gap-6 my-4 ">
+                    <input type="text" id="firstname"   name="firstname"placeholder="Firstname" class="py-2 px-14" >
+                    <input type="text" id="lastname"  name="lastname"   placeholder="Lastname" class="py-2 px-14"   >
+                  </div>
+                  <div class="my-4 w-full pr-10">
+                    <input type="email" name="email" id="email" placeholder="Email" class="py-2 w-full rounded-sm border border-gray-500 ">
+                  </div>
+                  <div class=" flex items-center  my-2">
+                    <p class="py-2  px-8">Car Name:</p>
+                    <select name="cars" id="" class="px-10">
+                      <option value="1"  name="car type">Toyota</option>
+                      <option value="2"  name="car type">Bmw</option>
+                      <option value="3"  name="car type">Benz</option>
+                      <option value="4"  name="car type">Honda</option>
+                      <option value="5"  name="car type">Nissan</option>
+                      <option value="6"  name="car type">Lexus</option>
+                      <option value="7"  name="car type">Volkswagen</option>
+                      <option value="8"  name="car type">Ford</option>
+                      <option value="9"  name="car type">Dodge</option>
+                      <option value="10" name="car type">Golf</option>
+        
+                    </select>
+                  </div>
+                  <div>
+                    <input type="text" name="Model" placeholder="Car model">
+                  </div>
+                  <div>
+                    <p class="font-bold text[1.1rem] my-2">Select service(s)</p>
+                  </div>
+                  <label for="service" class="block text-sm font-medium">Service</label>
+                    <div class="space-y-2">
+                        <div>
+                            <input type="checkbox" id="service1" name="service" value="Oil Change" class="mr-2">
+                            <label for="service1">Oil Change</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="service2" name="service" value="Brake Inspection" class="mr-2">
+                            <label for="service2">Brake Inspection</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="service3" name="service" value="Engine Repair" class="mr-2">
+                            <label for="service3">Engine Repair</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="service4" name="service" value="Transmission Service" class="mr-2">
+                            <label for="service4">Transmission Service</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="service5" name="service" value="Tire Rotation" class="mr-2">
+                            <label for="service">Tire Rotation</label>
+                        </div>
+                  <div>
+                    <label for="Message" class="block mt-4">Your Message</label>
+                    <input type="text" name="message" id="Message" class="px-16 py-6 mt-3">
+                  </div>
+                  <div class="my-6 flex justify-between">
+                    <button class="px-10 bg-red-600 text-white py-2 rounded-sm" id="btn" type="submit">Submit</button>
+                    <button class="px-8 py-2 rounded-sm bg-white border text-black">Cancel</button>
+                  </div>
+                </form>
+            </div>
+        </div>
+
+
+
+    
+    
+        </div>
+    </section>
+
+
+   
+      
+ 
+  <script src="main.js"></script>
+</body>
+</html>
